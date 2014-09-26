@@ -11,17 +11,20 @@
 	<form method="POST" action="etapa2.php"> 
  		<div align="center">
 			<center> 
-				<p>Nome: <input type="text" name="nome" size="20"></p>
+				<p>Nome: <input type="text" name="nome" size="20" value="<?php echo $nome;?>"></p>
+                                <?php if ($nome<=0||$nome>20){
+                                echo"Campo inválido. Insira novamente.";
+                                } ?>
 			</center>
 		</div>
 		<div align="center">
 			<center> 
-				<p>E-mail: <input type="text" name="email" size="20"></p> 
+				<p>E-mail: <input type="text" name="email" size="20" value="<?php echo $email;?>"></p> 
  			</center>
 		</div>
 		<div align="center">
 			<center> 
-				<p>Data de nascimento: <input type="text" name="datanascimento" size="20"></p> 
+				<p>Data de nascimento: <input type="text" name="datanascimento" size="20" value="<?php echo $datanascimento;?>"></p> 
  			</center>
 		</div>
 		<div align="center">
@@ -36,7 +39,7 @@
 		<div align="center">
 			<center> 
 				<p>
-					Profissão: <input type="text" name="profissao" size="20">
+					Profissão: <input type="text" name="profissao" size="20"value="<?php echo $profissao;?>">
 				</p> 
  			</center>
 		</div>
